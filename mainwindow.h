@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,17 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pushButtonOk_clicked();
+
+    void on_pushButtonCancel_clicked();
+
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
+
 private:
+    void keyPressEvent(QKeyEvent *);
     Ui::MainWindow *ui;
+    QString comand;
 };
 #endif // MAINWINDOW_H
