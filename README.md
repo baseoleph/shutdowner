@@ -1,3 +1,3 @@
 # Shutdowner
 
-A simple program that works like a windows' shutdowner.
+Program works like a windows' shut-down manager.
